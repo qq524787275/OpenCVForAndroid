@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">library</string>
+    <string name="press_again_exit" >再按一次退出</string>
+</resources>

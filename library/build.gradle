@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    //Fragment依赖
+    compile 'me.yokeyword:fragmentation:1.1.8'
+    compile 'me.yokeyword:fragmentation-swipeback:1.1.8'
+    //ButterKnife依赖
+    compile 'com.jakewharton:butterknife:8.8.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.0'
+    //Recyclerview依赖
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.27'
+    //Gson
+    compile 'com.google.code.gson:gson:2.8.0'
+    //glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //okgo
+    compile 'com.lzy.net:okgo:3.0.4'
+    compile 'com.lzy.net:okrx:1.0.2'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    //加载状态
+    compile 'com.github.Kennyc1012:MultiStateView:1.3.2'
+    //banner
+    compile 'com.youth.banner:banner:1.4.9'
+    //字体
+        compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    //ui
+    compile 'com.qmuiteam:qmui:1.0.4'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.contrarywind:Android-PickerView:3.2.6'
+    //    设置圆角图
+    //    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
+    compile 'com.airbnb.android:lottie:2.0.0'
+
+    //云信
+//    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+//    compile 'com.hyphenate:hyphenate-sdk-lite:3.3.0'
+
+    compile ('com.github.niorgai:StatusBarCompat:2.1.4', {
+        exclude group: 'com.android.support'
+    })
+
+}
